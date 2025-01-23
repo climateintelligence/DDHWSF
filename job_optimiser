@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=FSHW2D      # Specify job name
+#SBATCH --partition=shared     # Specify partition name
+#SBATCH --mem=10G              # Specify amount of memory needed
+#SBATCH --time=48:00:00        # Set a limit on the total run time
+#SBATCH --account=bk1318       # Charge resources on this project account
+#SBATCH --output=out%j    # File name for standard output
+#SBATCH --error=err%j    # File name for standard error
+
+### lons 0-40
+### lats 0-25
+
+for y in {0..0}
+do
+        for x in {0..0}
+                do
+                        python optimisation_past2k_NRMSE.py $y $x
+                done
+done
