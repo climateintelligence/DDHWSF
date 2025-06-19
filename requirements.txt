@@ -1,6 +1,6 @@
 numpy
 scipy
-dateutil
+python-dateutil
 math
 pandas
 xarray
