@@ -2,4 +2,4 @@ numpy
 pandas
 matplotlib
 jupyter
-pycro-sl
+PyCROSL
