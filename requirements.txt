@@ -4,6 +4,6 @@ pandas
 xarray
 matplotlib
 jupyter
-sklearn
+scikit-learn
 netCDF4
 PyCROSL
