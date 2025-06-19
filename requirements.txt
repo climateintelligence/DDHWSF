@@ -1,5 +1,12 @@
 numpy
+scipy
+dateutil
+math
 pandas
+xarray
+glob
 matplotlib
 jupyter
+sklearn
+netCDF4
 PyCROSL
