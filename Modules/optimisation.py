@@ -93,7 +93,7 @@ class optimisation(AbsObjectiveFunc):
 
         # Standardize data
 
-        Y_column = 'NDQ90' 
+        Y_column = 'Target' 
             
         X_train=train_dataset[train_dataset.columns.drop([Y_column]) ]
         Y_train=train_dataset[Y_column]
@@ -119,7 +119,7 @@ class optimisation(AbsObjectiveFunc):
 
         # NORMALISED RMSE OF CROSS-VALIDATION AND TEST
         from sklearn.model_selection import cross_val_score
-        iav=np.std(Y_train) # inter-annual variablity of NDQ90
+        iav=np.std(Y_train) # inter-annual variablity of target
         score = np.abs(cross_val_score(clf, X_train, Y_train, cv=5,scoring='neg_root_mean_squared_error'))/iav
 
         clf.fit(X_train, Y_train)
