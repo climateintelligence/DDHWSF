@@ -7,4 +7,5 @@ jupyter
 scikit-learn
 netCDF4
 ipywidgets
+dask
 PyCROSL
