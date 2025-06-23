@@ -6,4 +6,5 @@ matplotlib
 jupyter
 scikit-learn
 netCDF4
+ipywidgets
 PyCROSL
