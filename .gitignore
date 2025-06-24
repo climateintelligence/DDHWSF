@@ -1,2 +1,3 @@
 *.nc
-!past2k_tasmax_HWs_EUR_MJJA_period70018850_clim88218850.nc
+!DATA/past2k_tasmax_HWs_EUR_MJJA_period70018850_clim88218850.nc
+!DATA/ERA*.nc
