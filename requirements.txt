@@ -8,4 +8,5 @@ scikit-learn
 netCDF4
 ipywidgets
 dask
+gdown
 PyCROSL
