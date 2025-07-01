@@ -1,5 +1,10 @@
 # DDHWSF - Data-Driven Heatwave Season Forecasting
 
+LICENCSE
+
+This project is licensed under the European Union Public Licence v.1.2 (EUPL-1.2).  
+See the [LICENSE](./LICENSE) file for full terms.
+
 DEPENDENCIES AND ACKNOWLEDGMENTS
 
 This project makes use of pyCRO-SL – a Python implementation of the Coral Reef Optimization with Substrate Layers algorithm (https://pypi.org/project/PyCROSL/)
