@@ -32,12 +32,12 @@ def create_board(n_rows, n_cols, final_sequence, sequence_length, feat_sel):
 ### Produce forecasts based on optimal predictors ###
 
 # Inputs: p - grid point index, mod - ML model, pred_dataframe - full list of predcitors, remove-co2 - boolean to remove CO2 as predictor
-def forecast(target_past2k, target_era5, sol, mod, pred_dataframe, remove_co2):
+def forecast(target_past2k, target_era5, period, sol, mod, pred_dataframe, remove_co2):
     first_train = "7002-04-30"
-    last_train = "1979-04-30"
+    last_train = "1993-04-30"
     target_dates=[] # dummy date for summer HWMI
     train_years_past2k=range(7001,8851,1)
-    train_years_era5=range(1979,2021,1)
+    train_years_era5=range(period[0],period[1]+1,1)
     for year in train_years_past2k:
         target_dates.append(str(year).zfill(4)+"-04-30") # Days in June #
     for year in train_years_era5:

@@ -10,3 +10,4 @@ ipywidgets
 dask
 gdown
 PyCROSL
+lightgbm
