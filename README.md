@@ -1,7 +1,6 @@
 # DDHWSF - Data-Driven Heatwave Season Forecasting 
 
-DDHWSF is a two-step framework for data-driven seasonal forecatsing of heatwaves. The framework consists of: (1) an optimisaiton-based feature selection, which identifies key predictors of heatwaves in a paleo-climate simulation and (2) ML regressors traine don the paleo-climate predictors and applied to ERA5 (e.g. "real-world") predictors. 
-
+DDHWSF is a two-step framework for data-driven seasonal forecatsing of heatwaves. The framework consists of: (1) an optimisaiton-based feature selection, which identifies key predictors of heatwaves in a paleo-climate simulation and (2) ML regressors trained on the paleo-climate predictors and applied to ERA5 (e.g. "real-world") predictors. 
 
 This directory contains the:
 - Predictor data from past2k and ERA5 (area-averaged time series of clusters) files.
@@ -17,7 +16,7 @@ Run optimisation_past2k_NRMSE.py for each coordinate pairing x/longitude and y/l
 Inputs: 2D Heatwave data from model world "past2k_tasmax_HWs_EUR_MJJA_period70018850_clim88218850.nc" / Predictor data "Predictors_dataset_past2k_weekly.csv"
 Outputs: Optimised solutions "opt_MayMJJ_past2k_y_x.csv"
 
-### (2) SEASONAL FORECASTS
+### (2) ML_BASED SEASONAL FORECASTS
 
 Uses optimised solutions to forecast seasonal HW indicators over test period
 Inputs: 2D heatwave data from real world "ERA5_tmax_HWs_EUR_NDQ90_period19402022_clim19932016.nc" / Predictor data "Predictors_dataset_ERA5_weekly.csv"
