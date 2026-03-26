@@ -270,7 +270,7 @@ def calc_HWMIyear(target, climyears, years, cross_valid, percent_thresh, duratio
     HW_arg=np.argwhere(mask_duration_min.flatten()>0)
     HW_intensity_daily=np.zeros(((nyear)*nday))
     for arg in HW_arg:
-        arg=int(arg)
+        arg=int(arg[0])
         dur=int(mask_duration_min.flatten()[arg])
         HW_intensity_daily[arg:arg+dur]=exed_percentile.flatten()[arg:arg+dur]
 

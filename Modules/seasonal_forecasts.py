@@ -32,7 +32,7 @@ def create_board(n_rows, n_cols, final_sequence, sequence_length, feat_sel):
 ### Produce forecasts based on optimal predictors ###
 
 # Inputs: p - grid point index, mod - ML model, pred_dataframe - full list of predcitors, remove-co2 - boolean to remove CO2 as predictor
-def forecast(target_past2k, target_era5, period, sol, mod, pred_dataframe, remove_co2):
+def forecast(target_past2k, target_era5, period, sol, mod, pred_dataframe, remove_co2=True):
     first_train = "7002-04-30"
     last_train = "1993-04-30"
     target_dates=[] # dummy date for summer HWMI
@@ -84,8 +84,8 @@ def forecast(target_past2k, target_era5, period, sol, mod, pred_dataframe, remov
             dataset_opt[str(col)+'_lag'+str(time_lags[i]+j)] = pred_dataframe[col].shift(time_lags[i]+j)
 
         
-    first_train_index=int(np.argwhere(df.index==first_train))
-    last_train_index=int(np.argwhere(df.index==last_train))
+    first_train_index=int(np.argwhere(df.index==first_train)[0][0])
+    last_train_index=int(np.argwhere(df.index==last_train)[0][0])
     
     train_dataset_opt = dataset_opt[first_train_index:last_train_index]
     test_dataset_opt = dataset_opt[last_train_index:]
